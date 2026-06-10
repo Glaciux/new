@@ -1,0 +1,32 @@
+name: Testing Steps
+on: 
+    workflow_dispatch:
+
+jobs: 
+  print-in-linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print output
+        run: echo "Wassup bash"
+  
+  # run a python job
+  print-in-python:
+    needs: print-in-linux
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print a Python script
+        shell: python
+        run: |
+            print("Wassup man")  
+        
+ 
+  # run a javascript
+  print-in-js:
+    needs: print-in-python
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print in Javascript
+        uses: actions/hello-world-javascript-action@v1
+        with:
+           who-to-greet: "from an action in github marketplace"
+          
