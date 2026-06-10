@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs: 
-  Linux in Actions:
+  testing_linux_in_actions:
     runs-on: ubuntu-latest
 
     steps:
