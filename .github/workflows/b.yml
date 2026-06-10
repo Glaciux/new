@@ -13,4 +13,6 @@ jobs:
         run: |
           mkdir -p test/{a/b,c/d}
           touch test/a/b/file{1..3}.sh test/c/d/file{1..3}.txt
+          sudo apt install tree
+          tree test
           echo "Just ran something"
