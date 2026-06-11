@@ -18,5 +18,5 @@ jobs:
              mkdir -p test-{a,b,c}
              ls -R
              sudo apt install tree
-             tree test
+             tree .
              echo "And that's a wrap, $USER"
