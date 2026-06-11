@@ -1,6 +1,6 @@
 name: Printing Linux Commands
 on:
-  workflow_dispatch:
+  workflow_dispatch
 
 jobs: 
   testing_linux_in_actions:
@@ -16,3 +16,8 @@ jobs:
           sudo apt install tree
           tree test
           echo "Just ran something"
+
+
+
+
+

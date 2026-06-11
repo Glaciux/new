@@ -1,8 +1,9 @@
 name: Testing Steps
 on: 
-    workflow_dispatch:
+    workflow_dispatch
 
 jobs: 
+  # run a linux job
   print-in-linux:
     runs-on: ubuntu-24.04
     steps:
@@ -22,6 +23,7 @@ jobs:
  
   # run a javascript
   print-in-js:
+    # run a JS job
     needs: print-in-python
     runs-on: ubuntu-24.04
     steps:
