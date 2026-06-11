@@ -20,3 +20,4 @@ jobs:
              sudo apt install tree
              tree .
              echo "And that's a wrap, $USER"
+             echo "And counting..."
