@@ -1,0 +1,22 @@
+name: New
+on: 
+    push:
+      branches:
+        - main 
+    pull_request:
+      branches:
+        - main
+jobs:
+    test_push:
+        runs-on: ubuntu-24.04
+        steps:
+          - name: testing push
+            run: echo "Push Test"
+          - name: another test
+            run: |
+             echo "Trying others"
+             mkdir -p test-{a,b,c}
+             ls -R
+             sudo apt install tree
+             tree test
+             echo "And that's a wrap, $USER"
