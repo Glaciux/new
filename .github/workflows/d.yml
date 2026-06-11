@@ -15,7 +15,8 @@ jobs:
           - name: another test
             run: |
              echo "Trying others"
-             mkdir -p test-{a,b,c}
+          - name: third
+            run: |
              ls -R
              echo "And that's a wrap, $USER"
              echo "A new line"
